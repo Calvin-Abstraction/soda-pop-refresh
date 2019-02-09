@@ -2,8 +2,8 @@
 #
 # This should be run as a cron job to update the pop machine data.
 #
-# Author: John Kloosterman
-# Date: Feb. 28, 2011
+# Authors: John Kloosterman and Quentin Baker
+# Date: Feb. 9 2019
 
 DEVICE="/dev/ttyUSB0"
 POP_PATH="/home/pi/soda-pop-refresh/LEGACY"
@@ -35,9 +35,6 @@ $POP_PATH/dex_parser/dex_parser -xml < /tmp/$DATE.dex > /tmp/$DATE.xml
 
 # 5: Add the XML file to the database.
 $POP_PATH/xmltodb/parsexml.py /tmp/$DATE.xml
-
-# 6: Update Twitter!
-$POP_PATH/web_interface/update_twitter.py
 
 # 7: Clean up intermediate files.
 rm /tmp/$DATE.dex
