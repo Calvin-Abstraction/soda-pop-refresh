@@ -1,0 +1,18 @@
+Steps to install pop machine interface and CGI script
+=====================================================
+
+(0) Expand tarball or pull from repository into a directory.
+(1) Compile by calling make in the project root.
+(2) Modify glue/pop_machine.sh and glue/trick_popmachine.sh to reflect installation directory and desired log directory.
+(3) Set glue/pop_machine.sh to run as a cron job every so often, probably once every hour.
+(4) Modify web_interface/popmachine.py, xmltodb/settings.py to reflect where the database will go.
+(5) Install web_interface/popmachine.py into web server CGI directory.
+(6) Create database with xmltodb/createdb.py
+(7) Set glue/trick_popmachine to run at boot.
+(8) Restart or start trick_popmachine manually.
+
+Where there are hardcoded paths/settings:
+=========================================
+* glue/pop_machine.sh - binary and logfile directories
+* web_interface/popmachine.py, xmltodb/settings.py - database path
+* xmltodb/createdb.py - Human names for pop machine product numbers

@@ -1,0 +1,56 @@
+body {
+    font-family: sans-serif;
+    background: #3e718a;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+h3 {
+    background: #8ec1da;
+    padding: 2px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+}
+
+th {
+    text-align: center;
+}
+
+table.mainTable {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border-spacing: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+table.infoTable td {
+    border: 1px solid #0091bd;
+    padding: 5px;
+    text-align: center;
+}
+
+table.infoTable td.name {
+    text-align: left;
+}
+
+table.infoTable td.empty {
+    background-color: #f77;
+    border: 1px solid red;
+    font-size: 70%;
+}
+
+div#updated {
+    text-align: center;
+    font-size: 50%;
+}
+
+p.credits {
+    text-align: center;
+    font-size: 90%;
+}

@@ -1,0 +1,14 @@
+dex_parser parses the DEX files ouput by dex_communicate into better
+ formats.
+
+The format is elucidated in:
+  specifications/evadts_6-1.zip/EVADTS_6-1/EVADTS<date>.pdf, pg. 24-27,
+   with reference to Appendix A for more details.
+
+Most lines are parsed; the few types left out aren't interesting enough
+ to us to use.
+
+Note that lines beginning with MA5 are manufacturer-defined and I
+ only interpreted the lines I could guess the meaning of.
+
+You will need bison and flex to compile this.

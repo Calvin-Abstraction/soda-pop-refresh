@@ -1,0 +1,10 @@
+This program needs to be running anytime the cable is connected and
+the pop-machine user interface needs to be running (i.e. whenever
+we aren't pulling data.
+
+I think it works because the pop machine tests to see if the cable is
+connected by trying to pull the computer(TX) -> machine(RX) line to 0,
+so if we set it to 0, the pop machine thinks it was the cause and thinks
+there is no cable connected.
+
+Send it SIGUSR1 to tell it to gracefully shut down.

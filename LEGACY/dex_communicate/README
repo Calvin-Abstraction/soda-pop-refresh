@@ -1,0 +1,11 @@
+This is a linux port of the program in
+	specifications/Dexread Version 1.1.zip
+
+It will communicate using the DEX protocol with a pop machine on the other side of
+ DEVICE (defined in linux_io.c as "/dev/ttyS0") and spit out the raw data from the
+ machine.
+
+It takes ~5 seconds to get the data.
+
+If there is no pop machine connected, then it will retry MAX_TRIES times
+ (defined in dex.c) before giving up and exiting with a non-zero exit status.
