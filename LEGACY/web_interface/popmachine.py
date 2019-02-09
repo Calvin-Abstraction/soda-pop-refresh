@@ -68,6 +68,16 @@ This page is valid HTML5. </p>
 <img src="http://www.w3.org/html/logo/badge/html5-badge-h-graphics.png" width="133" height="64" alt="HTML5 Powered with Graphics, 3D &amp; Effects" title="HTML5 Powered with Graphics, 3D &amp; Effects">
 </a>"""
 
+logo = """
+<p style='text-align: center'> 
+<img class=soda-poplogo src="soda-poplogo.svg" alt="Soda can next to the words Soda-Pop.">
+</p>
+"""
+
+barGraph = """
+<img src="bargraph.png" alt="Bargraph showing sales of Soda-Pop by day.">
+"""
+
 # If we use border-radius, we can't use this.
 cssbadge = """<br/>
 <br/>
@@ -88,19 +98,21 @@ print ""
 print """<!DOCTYPE html>
 <meta charset="UTF-8">
 """
-
+"""print "<logo class='soda-poplogo'>"""
+"""print logo"""
 print "<title>Calvin CS Pop Machine</title>"
 print googleAnalytics
 graphHeaders()
 print "<link rel='stylesheet' href='popmachine.css' media='screen'/>"
+print logo
 
 print """
 <h1> Calvin Computer Science Pop Machine </h1>
 """
-
 print "<table class='mainTable'>"
 print "<tr><td style='vertical-align: top'>"
 infoTable()
+"""print barGraph"""
 print "<h3>Twitter</h3>"
 print twitterWidget
 print "<br/><br/>"
