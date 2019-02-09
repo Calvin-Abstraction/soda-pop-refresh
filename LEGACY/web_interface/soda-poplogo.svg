@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg815"
+   width="605.23267"
+   height="248.53612"
+   viewBox="0 0 605.23267 248.53612"
+   sodipodi:docname="soda-poplogo.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata821">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs819" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     id="namedview817"
+     showgrid="false"
+     inkscape:snap-global="false"
+     inkscape:zoom="1"
+     inkscape:cx="263.89587"
+     inkscape:cy="160.82052"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Base"
+     style="display:inline"
+     transform="translate(-202.05798,-129.1965)" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Trace"
+     style="display:inline"
+     transform="translate(-202.05798,-129.1965)">
+    <g
+       id="g1476">
+      <g
+         transform="rotate(35.513419,290.14914,297.24841)"
+         id="g1426">
+        <rect
+           style="display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:0;stroke:#ffd500;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect842"
+           width="72.833748"
+           height="106.70399"
+           x="237.11095"
+           y="259.19" />
+        <rect
+           style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:0;stroke:#ffd500;stroke-width:14;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect844"
+           width="74.871063"
+           height="113.32524"
+           x="237.11095"
+           y="257.40738"
+           ry="11.969183" />
+        <path
+           style="fill:#000000;fill-opacity:0;stroke:#ffd500;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 312.49132,275.08462 H 236.34694"
+           id="path848"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0;stroke:#ffd500;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 311.218,292.80558 -74.36173,22.91971"
+           id="path850"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#000000;fill-opacity:0;stroke:#ffd500;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 311.218,328.2038 -74.36173,22.91971"
+           id="path850-9"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         transform="rotate(-27.114023,317.55494,206.13427)"
+         id="g1453">
+        <circle
+           style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:0;stroke:#ffd500;stroke-width:11.32250118;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path875"
+           cx="380.00217"
+           cy="-76.108253"
+           r="12.743069"
+           transform="rotate(35.513419)" />
+        <circle
+           style="display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:0;stroke:#ffd500;stroke-width:11.32250118;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path875-9"
+           cx="422.47903"
+           cy="-40.767464"
+           r="12.743069"
+           transform="rotate(35.513419)" />
+        <circle
+           style="display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:0;stroke:#ffd500;stroke-width:11.32250118;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path875-9-5"
+           cx="386.28873"
+           cy="-4.5771575"
+           r="12.743069"
+           transform="rotate(35.513419)" />
+      </g>
+      <text
+         id="text909"
+         y="358.95523"
+         x="348.18198"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:101.49938202px;line-height:1.25;font-family:'Mayeka Light Demo';-inkscape-font-specification:'Mayeka Light Demo';letter-spacing:0px;word-spacing:0px;fill:#ffd500;fill-opacity:1;stroke:none;stroke-width:1.90311337"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Poetsen One';-inkscape-font-specification:'Poetsen One';fill:#ffd500;fill-opacity:1;stroke-width:1.90311337"
+           y="358.95523"
+           x="348.18198"
+           id="tspan907"
+           sodipodi:role="line">Soda-Pop</tspan></text>
+    </g>
+  </g>
+</svg>

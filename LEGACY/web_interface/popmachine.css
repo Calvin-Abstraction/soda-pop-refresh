@@ -1,18 +1,19 @@
 body {
     font-family: sans-serif;
-    background: #3e718a;
+    background: #8b2e2f;
 }
 
 h1 {
     text-align: center;
-    color: #fff;
+    color: #edcd45;
 }
 
 h3 {
-    background: #8ec1da;
+    background: #8b2e2f;
     padding: 2px;
     border-radius: 2px;
     -moz-border-radius: 2px;
+    color: #edcd45;
 }
 
 th {
@@ -26,11 +27,12 @@ table.mainTable {
     border-spacing: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
+    border-color: #8b2e2f;
     background: #ffffff;
 }
 
 table.infoTable td {
-    border: 1px solid #0091bd;
+    border: 1px solid #8b2e2f;
     padding: 5px;
     text-align: center;
 }

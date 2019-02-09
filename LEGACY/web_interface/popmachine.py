@@ -116,4 +116,4 @@ You should come visit me some time.</p>"""
 graphBody(600,300)
 
 print "</td></tr></table>"
-print "<p class='credits'>Maintainer: John Kloosterman &lt;jsk9&gt;</p>"
+print "<p class='credits'>Maintainer: Quentin Baker &lt;qrb2&gt;</p>"
