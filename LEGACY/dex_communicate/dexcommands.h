@@ -2,7 +2,7 @@
  * dexcommands.h - DEX protocol commands
  *
  * Created on: Feb 22, 2011
- * Author: John Kloosterman
+ * Authors: John Kloosterman and Quentin Baker
  */
 
 #ifndef DEXCOMMANDS_H_

@@ -2,7 +2,7 @@
  * linux_io.c - functions to communicate with the serial port under linux.
  *
  * Created on: Feb 22, 2011
- * Author: John Kloosterman
+ * Authors: John Kloosterman and Quentin Baker
  */
 
 #include "linux_io.h"
@@ -23,8 +23,8 @@
  */
 // #define ESC             27      /* ESCAPE character */
 
-/* Baud rate is 9600. */
-#define BAUDRATE B9600
+/* Baud rate is 9600. */ 
+#define BAUDRATE B9600 //WARNING: IF YOU OVERCLOCK THE PI THIS WILL NEED TO BE ADJUSTED
 
 int fd;			// the filedescriptor for DEVICE
 struct termios oldtio;	// the settings of DEVICE before we run.

@@ -1,7 +1,7 @@
 /* trick_popmachine.c - Trick pop machine into thinking there is a cable connected.
  *  Send SIGUSR1 to tell it to nicely shut down.
  * 
- * Author: John Kloosterman
+ * Authors: John Kloosterman and Quentin Baker
  * Date: Feb. 28, 2011
  */
 
@@ -86,11 +86,12 @@ int main (int argc, char **argv)
 		tcsendbreak(fd, 0);
 	}
 
-	/* This never gets executed, but this is what would go here if it did. */
-	tcsetattr(fd, TCSANOW, &prev);
+	/* // This never gets executed, but this is what would go here if it did.
+	tcsetattr(fd, TCSANOW, &prev)
 	if (close(fd) == -1)
 		perror("close()");
 
-	return 0;
+	return 0; 
+	*/
 }
 

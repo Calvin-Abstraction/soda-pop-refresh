@@ -2,7 +2,7 @@
  * constants.h - constants from dexread
  *
  *  Created on: Feb 22, 2011
- *  Author: John Kloosterman
+ *  Authors: John Kloosterman and Quentin Baker
  */
 
 #ifndef CONSTANTS_H_

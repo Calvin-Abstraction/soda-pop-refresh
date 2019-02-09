@@ -13,8 +13,8 @@ dex_communicate and dex_parser are written in C, and the rest is in Python.
 glue/pop_machine.sh strings together the components to pull data from the pop machine and put it
  into the database that the web interface uses.
 
-This was originally written by John Kloosterman <john.kloosterman@gmail.com> as an honours project
- for CS 232 (Operating Systems).
+V 1.0 was written by John Kloosterman <john.kloosterman@gmail.com> as an honours project
+ for CS 232 (Operating Systems). We've re-compiled much of the code to run on ARM and updated the server stack and interfaces.
 
 
 
