@@ -106,7 +106,7 @@ print "<h3>Tools Used</h3>"
 print lighttpdlogo
 print pythonlogo
 print raspi
-print html5badge
+# print html5badge # Currently we don't like the way this looks, so we're omitting.
 print "</td>"
 
 print "<td>"
