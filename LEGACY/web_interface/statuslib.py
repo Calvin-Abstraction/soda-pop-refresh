@@ -14,7 +14,7 @@ def infoTable():
 	c = conn.cursor()
 
 	# Table about products
-	print '<h3>Pop vended</h3>'
+	print '<h3>Pop Vended</h3>'
 	print '<table class="infoTable">'
 	print '<tr><th>Type</th>'
 	print '<th>Price</th>'
