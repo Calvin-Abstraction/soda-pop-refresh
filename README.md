@@ -49,4 +49,4 @@ give the soda-pop refillers (student volunteers!) an estimate of how much of eac
 get. Once we have 365 days of data, we could even pre-emptively purchase more stock during seasonal
 highs (e.g. finals) and reduce refill frequency during lows (e.g. summer).
 
-[abs][https://abs.calvin.edu/]
+[abs]: https://abs.calvin.edu/
