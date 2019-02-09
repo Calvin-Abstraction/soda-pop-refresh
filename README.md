@@ -12,7 +12,7 @@ faculty.
 The vending machine, a Vendo 540 model, has a simple microcontroller that keeps track of various 
 data-points such as sales, temperature, money in the machine, and other diagnostic data. This device 
 can then offload the data over a serial interface using the [DEX protocol][DEX-WP]. This data is 
-normally managed by specially designed devices used by a vanding technician whenever they refill or 
+normally managed by specially designed devices used by a vending technician whenever they refill or 
 service the machine.
 
 By creating a 1/4" TRS to RS-232 (9-Pin D-Sub) cable, we can pass the DEX data into our Raspberry Pi.
@@ -40,15 +40,15 @@ dedicated machine, to an up-to-date stack acheiving the same responsiveness whil
 entirely on a credit-card sized ARM SoC*, is a great start. However, this project is not done as of
 today. 
 
-Calvin's C.S. Club, Abstraction[abs], has adopted this project and intends to add the following by the
+Calvin's C.S. Club, [Abstraction][abs], has adopted this project and intends to add the following by the
 end of the semester:
 
 1. Responsive Website Design
 1. Social Media Integration (Tweet whenever it sells a soda, for example)
 1. Internal Management Tools and Statistics   
-  * To Elaborate on this a little, we would like to use the sales data with a statistical model to
+    * To Elaborate on this a little, we would like to use the sales data with a statistical model to
 give the soda-pop refillers (student volunteers!) an estimate of how much of each beverage we should
 get. Once we have 365 days of data, we could even pre-emptively purchase more stock during seasonal
 highs (e.g. finals) and reduce refill frequency during lows (e.g. summer).
 
-[abs][https://abs.calvin.edu/]
+[abs]: https://abs.calvin.edu/
