@@ -75,7 +75,9 @@ logo = """
 """
 
 barGraph = """
-<img src="bargraph.png" alt="Bargraph showing sales of Soda-Pop by day.">
+<div style="position: absolute;right: 160px;top: 535px;"> 
+<img src="bargraph.png" width="550" height="500" alt="Bargraph showing sales of Soda-Pop by day.">
+</div>
 """
 
 # If we use border-radius, we can't use this.
@@ -100,6 +102,7 @@ print """<!DOCTYPE html>
 """
 """print "<logo class='soda-poplogo'>"""
 """print logo"""
+print barGraph
 print "<title>Calvin CS Pop Machine</title>"
 print googleAnalytics
 graphHeaders()
