@@ -102,7 +102,7 @@ print """<!DOCTYPE html>
 """
 """print "<logo class='soda-poplogo'>"""
 """print logo"""
-print barGraph
+"""print barGraph"""
 print "<title>Calvin CS Pop Machine</title>"
 print googleAnalytics
 graphHeaders()

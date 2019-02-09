@@ -10,7 +10,7 @@ import sqlite3
 import sys
 from databasepath import *
 
-colour = "#3e718a"
+colour = "#8b2e2f"
 
 def outputData():
     hours = [0] * 24
