@@ -5,6 +5,9 @@
 # Author: John Kloosterman
 # Date: May 14, 2011
 
+# # Last Updated on February 09, 2018
+# By Ben Kastner
+
 import time
 import sqlite3
 import sys

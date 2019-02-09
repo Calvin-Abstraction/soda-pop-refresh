@@ -1,7 +1,8 @@
 #!/usr/bin/python
 # Combine Twitter feed, graphs, etc. into one page.
 #
-#
+# Last Updated on February 09, 2018
+# By Ben Kastner and Isfar Baset
 
 from graphlib import *
 from statuslib import *
