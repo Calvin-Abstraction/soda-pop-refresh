@@ -1,8 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 # Combine Twitter feed, graphs, etc. into one page.
 #
 #
 
+import MySQLdb
 from graphlib import *
 from statuslib import *
 
@@ -79,6 +80,12 @@ cssbadge = """<br/>
 </p>
 """
 
+# Connect to mySQL
+conn = MySQLdb.connect( host='localhost',
+                        user='popmachine',
+                        passwd='2SQV77Hp770I2VXuxbmTPb',
+                        db='popmachine' )
+
 # This can't be xhtmlized because of the Twitter widget.
 print "Content-type: text/html"
 print ""
@@ -91,7 +98,7 @@ print """<!DOCTYPE html>
 
 print "<title>Calvin CS Pop Machine</title>"
 print googleAnalytics
-graphHeaders()
+graphHeaders( conn )
 print "<link rel='stylesheet' href='popmachine.css' media='screen'/>"
 
 print """
@@ -100,7 +107,7 @@ print """
 
 print "<table class='mainTable'>"
 print "<tr><td style='vertical-align: top'>"
-infoTable()
+infoTable( conn )
 print "<h3>Twitter</h3>"
 print twitterWidget
 print "<br/><br/>"
@@ -113,7 +120,7 @@ print """
 <p>I am the Calvin Computer Science department's pop machine. <br/> 
 I live in the corner of SB321, the CS lounge. <br/>
 You should come visit me some time.</p>"""
-graphBody(600,300)
+graphBody( 600, 300)
 
 print "</td></tr></table>"
 print "<p class='credits'>Maintainer: John Kloosterman &lt;jsk9&gt;</p>"

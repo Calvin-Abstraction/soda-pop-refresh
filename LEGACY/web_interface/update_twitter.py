@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 #
 # Update the pop machine Twitter feed, @calvin_pop.
 #

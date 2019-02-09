@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 #
 
 import cgi
@@ -8,9 +8,7 @@ import copy
 import sys
 from databasepath import *
 
-def infoTable():
-	# Connect to database.
-	conn = sqlite3.connect(databaseFile)
+def infoTable( conn ):
 	c = conn.cursor()
 
 	# Table about products
@@ -33,7 +31,7 @@ def infoTable():
 	num_products = 11
 
 	for i in range(num_products):
-		c.execute("SELECT * FROM product WHERE product_id=? ORDER BY unix_time LIMIT 1", [i])
+		c.execute("SELECT * FROM product_readings WHERE product_id=? ORDER BY unix_time LIMIT 1", [i])
 		first_row = c.fetchone()
 
 		# If the product is never mentioned, ignore it.
@@ -44,11 +42,11 @@ def infoTable():
 		print "<tr>"
 
 		# Get latest entry
-		c.execute("SELECT * FROM product WHERE product_id=? ORDER BY unix_time DESC LIMIT 1", [i])
+		c.execute("SELECT * FROM product_readings WHERE product_id=? ORDER BY unix_time DESC LIMIT 1", [i])
 		last_row = c.fetchone()
 	
 		# Get first entry 24 hours (86400 seconds) ago.
-		c.execute("SELECT * FROM product WHERE product_id=? AND unix_time >= ? LIMIT 1", [i, time.time() - 86400])
+		c.execute("SELECT * FROM product_readings WHERE product_id=? AND unix_time >= ? LIMIT 1", [i, time.time() - 86400])
 		midnight_row = c.fetchone()
 
 		# This happens when the product is only mentioned once.
@@ -108,7 +106,7 @@ def infoTable():
 	# Temperature and update time.
 	# Get the 2 most recent temperature entries.
 	# The penultimate is used for the product header, so we need it now.
-	c.execute("SELECT * FROM temperature ORDER BY unix_time DESC LIMIT 2");
+	c.execute("SELECT * FROM temperatures ORDER BY unix_time DESC LIMIT 2");
 	row = c.fetchone()
 	prevrow = c.fetchone()
 
@@ -125,13 +123,5 @@ def infoTable():
 			print "<p>The pop is chilling at {0:.3}&deg;C ({1}&deg;F).</p>".format(celsius, row[1])
 		else:
 			print "<p>The pop is chilling at {0}&deg;{1}.</p>".format(row[1], row[2])
-
-
-	# Last updated
-	# if row is not None:
-	#	print '<div id="updated">'
-	#	print "Data was last updated at", time.ctime(row[0])
-	#	print '</div>'
-
-	# Close database
-	conn.close()
+	
+	# And all is well...
