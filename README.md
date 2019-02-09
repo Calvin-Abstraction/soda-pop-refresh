@@ -1,3 +1,5 @@
+![Soda-Pop-Logo](assets/soda-poplogo.svg)
+
 # Soda-Pop-Refresh
 
 Soda-Pop-Refresh is a webserver stack running on a Raspberry Pi 3 that pulls data from a vending 
