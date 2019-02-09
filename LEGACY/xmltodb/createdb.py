@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # createdb.py - create the tables in the database that parsexml.py uses.
 #
-# Author: John Kloosterman
+# Authors: John Kloosterman and Quentin Baker
 # Date: Feb. 25, 2011
 
 import sqlite3
@@ -16,7 +16,8 @@ conn.execute("create table temperature (unix_time FLOAT, temp FLOAT, unit CHAR)"
 conn.execute("create table names (product_id INTEGER, name VARCHAR)")
 conn.execute("CREATE TABLE refills (product_id INTEGER, number INTEGER, unix_time FLOAT)");
 
-# Add names for our specific pop machine.
+# Add names for our specific pop machine. 
+# TODO: Make a web endpoint to allow changing this when we put in different flavors
 names = {1:"Coke", 3:"Diet Coke", 5:"Mountain Dew", 7:"Caffeine-free Diet Coke", 8:"A&W Root Beer", 9:"Vernor's"}
 
 for prod, name in names.iteritems():

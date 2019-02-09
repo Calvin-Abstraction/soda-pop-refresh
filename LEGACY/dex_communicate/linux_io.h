@@ -2,7 +2,7 @@
  * linux_io.h - functions to communicate with the serial port under linux.
  *
  * Created on: Feb 22, 2011
- * Author: John Kloosterman
+ * Authors: John Kloosterman and Quentin Baker
  */
 
 #ifndef LINUX_IO_H_
