@@ -1,20 +1,14 @@
-#!/usr/bin/python2
+#!/usr/bin/python
 # parsexml.py - input interesting data from xml file output by dex_parser into database
 #
 # Author: John Kloosterman
 # Date: Feb. 26, 2011
 
 import xml.parsers.expat
+import sqlite3
 import time
 import sys
-import MySQLdb
-
-def mysqlconnect():
-    return MySQLdb.connect( host='localhost',
-                            user='popmachine',
-                            passwd='2SQV77Hp770I2VXuxbmTPb',
-                            db='popmachine' )
-
+from settings import *
 
 # Global variables
 #
@@ -79,15 +73,14 @@ if __name__ == '__main__':
 		sys.exit()
 
 	# Commit it to the database.
-	conn = mysqlconnect()
-        c = conn.cursor()
+	conn = sqlite3.connect(databaseFile)
 
 	for product, d in products.iteritems():
             # Only insert a row if we sold something.
             if d['vended'] != 0:
-                c.execute("insert into product_readings values (%s, %s, %s, %s)", [time.time(), int(product), float(d['price']) / 100, int(d['vended'])])
+                conn.execute("insert into product values (?,?,?,?)", [time.time(), int(product), float(d['price']) / 100, int(d['vended'])])
 
-	c.execute("insert into temperatures values ( %s, %s, %s)", [time.time(), tempValue, tempUnit])
+	conn.execute("insert into temperature values (?,?,?)", [time.time(), tempValue, tempUnit])
 
 	conn.commit()
 	conn.close()
