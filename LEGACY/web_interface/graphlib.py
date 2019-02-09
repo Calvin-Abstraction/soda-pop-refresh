@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/python
 #
 # Pretty graphs!
 #
@@ -6,17 +6,20 @@
 # Date: May 14, 2011
 
 import time
+import sqlite3
 import sys
+from databasepath import *
 
 colour = "#3e718a"
 
-def outputData( conn ):
+def outputData():
     hours = [0] * 24
     days = [0] * 7
     months = [0] * 12
     yearDays = [0] * 366
     todayHours = [0] * 24
 
+    conn = sqlite3.connect(databaseFile)
     c = conn.cursor()
 
     # We only want to do this for rows where we've sold something.
@@ -29,7 +32,7 @@ def outputData( conn ):
     for i in range(num_products):
         # Historical Data
         # ===============
-        c.execute("SELECT * FROM product_readings WHERE product_id=%s AND unix_time > %s ORDER BY unix_time DESC", [ i, time.time() - ( 365*24*3600 ) ] )
+        c.execute("SELECT * FROM product WHERE product_id=? ORDER BY unix_time DESC", [i])
         
         # Don't bother with unmentioned products.
         prevRow = c.fetchone()
@@ -55,18 +58,13 @@ def outputData( conn ):
 
                 # Day of year
                 # This is 1-indexed.
-                # Compensate for that day I put far too many in.
-                #  The magic number in UNIX time for Nov. 1, 2012
-                if yearDays[strtime.tm_yday - 1] > 13 and time.time() < 1351728000:
-                    yearDays[strtime.tm_yday - 1] = 13
-                else:
-                    yearDays[strtime.tm_yday - 1] += numVended
+                yearDays[strtime.tm_yday - 1] += numVended
 
                 prevRow = row
 
         # Data for today
         # ==============
-        c.execute("SELECT * FROM product_readings WHERE product_id=%s AND unix_time > %s ORDER BY unix_time", [i, time.time() - 86400])
+        c.execute("SELECT * FROM product WHERE product_id=? AND unix_time > ? ORDER BY unix_time", [i, time.time() - 86400])
         prevRow = c.fetchone()
         if prevRow is not None:
             for row in c:
@@ -110,26 +108,27 @@ def outputData( conn ):
     todayHourData += "];"
     print todayHourData;
 
+    conn.close()
+
 # Last 10 temperatures. Note these will be from most to least recent, so
 #  we use JavaScript to reverse this array before making it into a graph.
-def outputTemps (conn):
+def outputTemps ():
+    conn = sqlite3.connect(databaseFile)
     c = conn.cursor()
     temps = "var tempData = ["
 
-    c.execute("SELECT * FROM temperatures ORDER BY unix_time DESC LIMIT 20")
+    c.execute("SELECT * FROM temperature ORDER BY unix_time DESC LIMIT 20")
     for row in c:
         celsius = (row[1] - 32) * (5.0/9.0)
         temps += str(celsius) + ','
 
     temps += '];'
+
+    conn.close()
     print temps
 
 # Output the stuff that needs to go in the <head> section of the file.
-#
-# @param conn
-#  A database connection
-#
-def graphHeaders( conn ):
+def graphHeaders():
     print """
     <script src="js/rgraph/RGraph.common.core.js" type="text/javascript"></script>
     <script src="js/rgraph/RGraph.common.annotate.js" type="text/javascript"></script>
@@ -142,8 +141,8 @@ def graphHeaders( conn ):
 
     <script type="text/javascript">
     window.onload = function() { """
-    outputData( conn )
-    outputTemps( conn )
+    outputData()
+    outputTemps()
     print """
          var monthBar = new RGraph.Bar('monthChart', monthData);
          monthBar.Set('chart.labels', ['Jan.', 'Feb.', 

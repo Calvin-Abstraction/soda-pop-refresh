@@ -1,13 +1,14 @@
-#!/usr/bin/python2
+#!/usr/bin/python
 #
 # Form to enter machine refills.
 #
 
 import cgi
 import cgitb
+import sqlite3
 import time
 import hashlib
-from mysqlconnect import *
+from databasepath import *
 
 print "Content-type: text/html"
 print ""
@@ -17,10 +18,10 @@ import cgitb
 cgitb.enable()
 
 def generatePopsForm():
-    conn = mysqlconnect()
+    conn = sqlite3.connect( databaseFile )
     c = conn.cursor()
 
-    c.execute("SELECT product_id, product FROM products");
+    c.execute("SELECT product_id, name FROM names");
 
     print "<table>"
     print "<tr><th>Pop</th>"
@@ -65,10 +66,10 @@ def commitForm():
         print "Wrong secret!"
         exit()
 
-    conn = mysqlconnect()
+    conn = sqlite3.connect( databaseFile )
     c = conn.cursor()
 
-    c.execute("SELECT product_id FROM products")
+    c.execute("SELECT product_id FROM NAMES")
     for row in c:
         number = form.getfirst("refill_" + str(row[0]), None)
 
@@ -76,7 +77,7 @@ def commitForm():
             continue
 
         d = conn.cursor()
-        d.execute("INSERT INTO refills VALUES (%s, %s, %s )",
+        d.execute("INSERT INTO refills VALUES (?, ?, ? )",
                   [ time.time(), row[0], number ] )
 
     conn.commit()

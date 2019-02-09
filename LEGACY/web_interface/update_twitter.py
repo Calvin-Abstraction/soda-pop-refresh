@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/python
 #
 # Update the pop machine Twitter feed, @calvin_pop.
 #
@@ -7,14 +7,14 @@
 
 import twitter
 import sqlite3
-from mysqlconnect import *
+from databasepath import *
 
 # Connect to database.
-conn = mysqlconnect()
+conn = sqlite3.connect(databaseFile)
 c = conn.cursor()
 
 # Get two last entries.
-c.execute("SELECT * FROM temperatures ORDER BY unix_time DESC LIMIT 2");
+c.execute("SELECT * FROM temperature ORDER BY unix_time DESC LIMIT 2");
 row = c.fetchone()
 prevRow = c.fetchone()
 
@@ -32,14 +32,14 @@ else:
     if (secondsElapsed > 3500) and (secondsElapsed < 3700):
         hours = "hour"
     else:
-        hours = "{0:.1} hours".format(secondsElapsed / 3600.0)
+        hours = "{0:.1} hours".format(secondsElapsed / 3600)
     durationPart = "In the last " + hours
 
 # Our machine can hold up to 10 products.
 num_products = 10
 productParts = []
 for i in range(num_products):
-    c.execute("SELECT * FROM product_readings WHERE product_id=%s ORDER BY unix_time DESC LIMIT 2", [i])
+    c.execute("SELECT * FROM product WHERE product_id=? ORDER BY unix_time DESC LIMIT 2", [i])
     row = c.fetchone()
     prevRow = c.fetchone()
 
@@ -56,7 +56,7 @@ for i in range(num_products):
         continue
 
     # Find out the name of our product.
-    c.execute("SELECT * FROM products WHERE product_id=%s", [i])
+    c.execute("SELECT * FROM names WHERE product_id=?", [i])
     name_row = c.fetchone()
 
     if name_row is None:
