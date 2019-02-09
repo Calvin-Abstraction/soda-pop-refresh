@@ -10,7 +10,7 @@ faculty.
 The vending machine, a Vendo 540 model, has a simple microcontroller that keeps track of various 
 data-points such as sales, temperature, money in the machine, and other diagnostic data. This device 
 can then offload the data over a serial interface using the [DEX protocol][DEX-WP]. This data is 
-normally managed by specially designed devices used by a vanding technician whenever they refill or 
+normally managed by specially designed devices used by a vending technician whenever they refill or 
 service the machine.
 
 By creating a 1/4" TRS to RS-232 (9-Pin D-Sub) cable, we can pass the DEX data into our Raspberry Pi.
