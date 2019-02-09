@@ -96,7 +96,7 @@ def infoTable():
 		print "</td>"
 
 		# Today
-		print "<td>", last_row[3] - midnight_row[3], "</td>"
+#		print "<td>", last_row[3] - midnight_row[3], "</td>"
 		# Since began tracking
 		print "<td>", last_row[3] - first_row[3], "</td>"
 

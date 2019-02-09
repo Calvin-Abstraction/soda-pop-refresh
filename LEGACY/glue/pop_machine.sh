@@ -6,7 +6,7 @@
 # Date: Feb. 28, 2011
 
 DEVICE="/dev/ttyUSB0"
-POP_PATH="/home/john/popmachine"
+POP_PATH="/home/pi/soda-pop-refresh/LEGACY"
 DATE=`date +%F_%R`
 
 echo "$DATE : Updating pop machine data..."

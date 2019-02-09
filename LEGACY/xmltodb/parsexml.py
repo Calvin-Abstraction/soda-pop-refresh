@@ -49,6 +49,7 @@ def char_data(data):
     elif curTag == "temperature_units":
         tempUnit = data
 
+
 if __name__ == '__main__':
 	if (len(sys.argv) == 1):
 		print "parsexml.py - input XML file output by dex_parser to database."
