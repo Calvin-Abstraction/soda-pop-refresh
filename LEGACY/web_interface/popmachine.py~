@@ -9,6 +9,40 @@ from statuslib import *
 import cgitb
 cgitb.enable()
 
+twitterWidget = """
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script type="text/javascript">
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 6,
+  interval: 6000,
+  width: 325,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#3e718a',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#3e718a',
+      links: '#8ec1da'
+    }
+  },
+  features: {
+    scrollbar: true,
+    loop: false,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: false,
+    behavior: 'all'
+  }
+}).render().setUser('calvin_pop').start();
+</script>
+"""
+
 googleAnalytics = """
 <script type="text/javascript">
 
@@ -41,8 +75,8 @@ logo = """
 """
 
 barGraph = """
-<div style="position: absolute;right: 160px;top: 535px;"> 
-<img src="bargraph.png" width="550" height="500" alt="Bargraph showing sales of Soda-Pop by day.">
+<div style="position: absolute;left: 1;"> 
+<img src="bargraph.png" width="500" height="500" alt="Bargraph showing sales of Soda-Pop by day.">
 </div>
 """
 
@@ -68,7 +102,6 @@ print """<!DOCTYPE html>
 """
 """print "<logo class='soda-poplogo'>"""
 """print logo"""
-"""print barGraph"""
 print "<title>Calvin CS Pop Machine</title>"
 print googleAnalytics
 graphHeaders()
@@ -81,7 +114,9 @@ print """
 print "<table class='mainTable'>"
 print "<tr><td style='vertical-align: top'>"
 infoTable()
-"""print barGraph"""
+print barGraph
+print "<h3>Twitter</h3>"
+print twitterWidget
 print "<br/><br/>"
 print html5badge
 print "</td>"
