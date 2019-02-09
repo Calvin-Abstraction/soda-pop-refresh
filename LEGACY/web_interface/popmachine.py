@@ -2,7 +2,7 @@
 # Combine Twitter feed, graphs, etc. into one page.
 #
 # Last Updated on February 09, 2018
-# By Ben Kastner and Isfar Baset
+# By Ben Kastner Isfar Baset, and Quentin Baker
 
 from graphlib import *
 from statuslib import *
@@ -26,14 +26,32 @@ googleAnalytics = """
 </script>
 """
 
+lighttpdlogo = """
+<p style='text-align: center'>
+<a href="https://www.lighttpd.net/">
+<img class=lighttpd-badge src="https://www.lighttpd.net/light_button.png" alt="Lighttpd Server"> 
+</a></p>
+"""
+pythonlogo = """
+<p style='text-align: center'>
+<a href="https://python.org/">
+<img src="https://www.python.org/static/community_logos/python-powered-w-140x56.png" alt="Powered by Python">
+</a></p>
+"""
+raspi = """
+<p style='text-align: center'>
+<a href="https://raspberrypi.org/">
+<img src="https://www.raspberrypi.org/homepage-9df4b/favicon.png" alt="Served on Delicious Pi 3">
+</a></p>
+"""
+
 html5badge = """
 <p style='text-align: center'>
 This page is valid HTML5. </p>
 
 <p style='text-align: center'>
-<a href="http://validator.w3.org/check?uri=http%3A%2F%2Fsoda-pop.calvin.edu">
 <img src="http://www.w3.org/html/logo/badge/html5-badge-h-graphics.png" width="133" height="64" alt="HTML5 Powered with Graphics, 3D &amp; Effects" title="HTML5 Powered with Graphics, 3D &amp; Effects">
-</a>"""
+"""
 
 logo = """
 <p style='text-align: center'> 
@@ -84,6 +102,10 @@ print "<tr><td style='vertical-align: top'>"
 infoTable()
 """print barGraph"""
 print "<br/><br/>"
+print "<h3>Tools Used</h3>"
+print lighttpdlogo
+print pythonlogo
+print raspi
 print html5badge
 print "</td>"
 
